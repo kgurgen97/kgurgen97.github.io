@@ -1,92 +1,428 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="google-site-verification" content="KxRiAEDLluoWmqNUcyyYMnuXRH112ObEyKPYxDpxwGo" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gurgen Karapetyan | Bioinformatics & Computational Genomics</title>
-  <meta name="description" content="Gurgen Karapetyan is a Bioinformatics Data Engineer, Computational Biologist, and researcher working in genomics, NGS, RNA-seq, metagenomics, molecular biology, and microbiology.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://kgurgen97.github.io/">
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gurgen Karapetyan | Bioinformatics & Computational Genomics</title>
+<meta name="description" content="Gurgen Karapetyan — Bioinformatics Data Engineer, Computational Biologist and researcher in genomics, NGS, RNA-seq, metagenomics, molecular biology and microbiology.">
+<meta name="author" content="Gurgen Karapetyan">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-site-verification" content="KxRiAEDLluoWmqNUcyyYMnuXRH112ObEyKPYxDpxwGo">
+<link rel="canonical" href="https://gurgenkarapetyan.is-a.dev/">
+
+<meta property="og:title" content="Gurgen Karapetyan | Bioinformatics & Computational Genomics">
+<meta property="og:description" content="Bioinformatics Data Engineer, Computational Biologist and researcher in genomics, NGS, RNA-seq and metagenomics.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://gurgenkarapetyan.is-a.dev/">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfilePage",
+  "url":"https://gurgenkarapetyan.is-a.dev/",
+  "name":"Gurgen Karapetyan | Bioinformatics & Computational Genomics",
+  "mainEntity":{
     "@type":"Person",
     "name":"Gurgen Karapetyan",
-    "url":"https://kgurgen97.github.io/",
+    "url":"https://gurgenkarapetyan.is-a.dev/",
     "jobTitle":"Bioinformatics Data Engineer",
     "sameAs":[
       "https://github.com/kgurgen97",
       "https://scholar.google.com/citations?hl=ru&user=DuhHgykAAAAJ",
       "https://orcid.org/0009-0005-5509-2576",
-      "https://www.linkedin.com/in/gurgen-karapetyan-172612274/"
+      "https://www.linkedin.com/in/gurgen-karapetyan-172612274/",
+      "https://t.me/CATGCCTAT"
+    ],
+    "knowsAbout":[
+      "Bioinformatics","Computational Genomics","NGS","RNA-seq","Metagenomics",
+      "Comparative Genomics","Microbial Genomics","Molecular Biology","Microbiology"
     ]
   }
-  </script>
-  <style>
-    body {font-family: Arial, Helvetica, sans-serif; max-width: 900px; margin: 0 auto; padding: 48px 24px; line-height: 1.65; color:#1f2328;}
-    h1 {font-size: 42px; margin-bottom: 8px;}
-    h2 {margin-top: 40px; border-bottom: 1px solid #d0d7de; padding-bottom: 8px;}
-    .subtitle {font-size: 20px; color:#57606a; margin-bottom: 24px;}
-    a {color:#0969da; text-decoration:none;}
-    a:hover {text-decoration:underline;}
-    .links a {margin-right:18px;}
-    .project {margin-bottom:24px;}
-    footer {margin-top:48px; color:#6e7781; font-size:14px;}
-  </style>
+}
+</script>
+
+<style>
+:root{
+  --bg:#050816;
+  --bg2:#091022;
+  --panel:rgba(12,18,38,.72);
+  --panel2:rgba(17,25,49,.88);
+  --text:#f7fbff;
+  --muted:#a7b6ca;
+  --line:rgba(255,255,255,.10);
+  --cyan:#52f7e8;
+  --blue:#5ca8ff;
+  --violet:#9a76ff;
+  --pink:#ff6ec7;
+  --green:#8fffba;
+  --yellow:#ffe07a;
+  --shadow:0 30px 90px rgba(0,0,0,.42);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--text);
+  font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at 10% 10%,rgba(82,247,232,.16),transparent 24rem),
+    radial-gradient(circle at 88% 14%,rgba(154,118,255,.15),transparent 28rem),
+    radial-gradient(circle at 50% 88%,rgba(255,110,199,.11),transparent 30rem),
+    linear-gradient(180deg,#050816 0%,#07101f 48%,#050816 100%);
+  min-height:100vh; overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;opacity:.26;
+  background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 60px;
+  mask-image:linear-gradient(to bottom,black,transparent 85%);
+}
+a{color:inherit}
+.shell{width:min(1180px,calc(100% - 36px));margin:auto}
+nav{
+  position:sticky;top:14px;z-index:20;margin-top:14px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+  padding:12px 14px;border:1px solid var(--line);border-radius:18px;
+  background:rgba(7,12,27,.72);backdrop-filter:blur(18px);
+  box-shadow:0 12px 40px rgba(0,0,0,.18)
+}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo{
+  width:42px;height:42px;border-radius:13px;display:grid;place-items:center;font-weight:900;
+  color:#04110f;background:linear-gradient(135deg,var(--cyan),var(--green));
+  box-shadow:0 0 30px rgba(82,247,232,.24)
+}
+.brand small{display:block;color:var(--muted);font-size:.72rem;margin-top:2px}
+.links{display:flex;align-items:center;gap:6px}
+.links a{padding:9px 11px;text-decoration:none;color:var(--muted);font-size:.84rem;font-weight:700;border-radius:10px}
+.links a:hover{color:var(--text);background:rgba(255,255,255,.06)}
+
+.hero{
+  min-height:88vh;display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center;
+  padding:80px 0 70px
+}
+.kicker{
+  display:inline-flex;align-items:center;gap:9px;padding:7px 10px;border-radius:999px;
+  border:1px solid rgba(82,247,232,.22);background:rgba(82,247,232,.06);
+  color:var(--cyan);font:800 .68rem/1 ui-monospace,monospace;letter-spacing:.11em;text-transform:uppercase
+}
+.kicker i{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 15px var(--cyan)}
+h1{
+  font-size:clamp(4.2rem,8vw,7.7rem);line-height:.90;letter-spacing:-.07em;
+  margin:22px 0 26px;max-width:8.8ch
+}
+.grad{
+  display:block;color:transparent;
+  background:linear-gradient(90deg,var(--cyan),var(--blue) 48%,var(--violet) 78%,var(--pink));
+  -webkit-background-clip:text;background-clip:text
+}
+.lede{font-size:1.18rem;line-height:1.72;color:var(--muted);max-width:690px}
+.lede strong{color:var(--text)}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;padding:13px 17px;border-radius:13px;
+  text-decoration:none;font-weight:850;font-size:.9rem;border:1px solid var(--line);
+  transition:.25s ease
+}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:linear-gradient(135deg,var(--cyan),var(--green));color:#05110f;border:none}
+.ghost{background:rgba(255,255,255,.035)}
+.hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:32px}
+.hero-tags span{
+  font-size:.72rem;color:#dbe7f7;border:1px solid var(--line);padding:7px 9px;border-radius:10px;
+  background:rgba(255,255,255,.03)
+}
+
+.visual{
+  position:relative;min-height:620px;border:1px solid var(--line);border-radius:30px;overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 44%,rgba(82,247,232,.12),transparent 34%),
+    radial-gradient(circle at 72% 26%,rgba(154,118,255,.12),transparent 28%),
+    linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.015));
+  box-shadow:var(--shadow)
+}
+.visual:before{
+  content:"";position:absolute;inset:-1px;border-radius:30px;padding:1px;
+  background:linear-gradient(130deg,rgba(82,247,232,.55),transparent 26%,transparent 70%,rgba(154,118,255,.4));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none
+}
+.orbit{position:absolute;border:1px solid rgba(255,255,255,.08);border-radius:50%}
+.o1{width:420px;height:420px;left:50%;top:50%;transform:translate(-50%,-50%)}
+.o2{width:300px;height:300px;left:50%;top:50%;transform:translate(-50%,-50%) rotate(22deg)}
+.o3{width:180px;height:180px;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-28deg)}
+.core{
+  position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);
+  width:170px;height:170px;border-radius:50%;display:grid;place-items:center;text-align:center;
+  background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.15),rgba(9,21,38,.86) 55%);
+  border:1px solid rgba(82,247,232,.35);box-shadow:0 0 80px rgba(82,247,232,.12)
+}
+.core b{font-size:3.3rem;letter-spacing:-.08em;background:linear-gradient(135deg,var(--cyan),var(--blue));color:transparent;-webkit-background-clip:text}
+.core small{display:block;color:var(--muted);font-size:.68rem;margin-top:-18px}
+.dot{position:absolute;width:16px;height:16px;border-radius:50%;box-shadow:0 0 18px currentColor}
+.d1{left:18%;top:27%;background:var(--cyan);color:var(--cyan);animation:float1 5s ease-in-out infinite}
+.d2{right:16%;top:33%;background:var(--violet);color:var(--violet);animation:float2 6s ease-in-out infinite}
+.d3{left:24%;bottom:24%;background:var(--pink);color:var(--pink);animation:float2 4.8s ease-in-out infinite reverse}
+.d4{right:20%;bottom:18%;background:var(--green);color:var(--green);animation:float1 5.8s ease-in-out infinite reverse}
+@keyframes float1{50%{transform:translate(22px,-18px) scale(1.15)}}
+@keyframes float2{50%{transform:translate(-18px,20px) scale(.9)}}
+.dna{
+  position:absolute;left:50%;top:50%;width:420px;height:420px;transform:translate(-50%,-50%);
+  filter:drop-shadow(0 0 18px rgba(82,247,232,.25))
+}
+.dna svg{width:100%;height:100%;animation:spin 22s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.console{
+  position:absolute;left:22px;right:22px;bottom:22px;padding:16px 18px;border-radius:16px;
+  border:1px solid var(--line);background:rgba(4,9,21,.74);backdrop-filter:blur(16px);
+  font-family:ui-monospace,Menlo,monospace;font-size:.75rem;color:var(--muted)
+}
+.console strong{color:var(--cyan)}
+.console div+div{margin-top:6px}
+
+.section{padding:105px 0;border-top:1px solid var(--line)}
+.section-label{font:800 .7rem/1 ui-monospace,monospace;color:var(--cyan);letter-spacing:.14em;text-transform:uppercase;margin-bottom:26px}
+.section h2{font-size:clamp(2.7rem,5vw,5rem);line-height:.98;letter-spacing:-.055em;margin:0 0 18px}
+.section-intro{color:var(--muted);font-size:1.05rem;max-width:760px}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:46px}
+.card{
+  min-height:250px;padding:22px;border:1px solid var(--line);border-radius:20px;
+  background:linear-gradient(155deg,rgba(255,255,255,.055),rgba(255,255,255,.012));
+  position:relative;overflow:hidden;transition:.28s ease
+}
+.card:before{
+  content:"";position:absolute;width:180px;height:180px;right:-90px;top:-90px;border-radius:50%;
+  background:radial-gradient(circle,rgba(82,247,232,.18),transparent 68%);opacity:.45
+}
+.card:nth-child(2):before,.card:nth-child(5):before{background:radial-gradient(circle,rgba(154,118,255,.22),transparent 68%)}
+.card:nth-child(3):before,.card:nth-child(6):before{background:radial-gradient(circle,rgba(255,110,199,.18),transparent 68%)}
+.card:hover{transform:translateY(-6px);border-color:rgba(82,247,232,.30);background:linear-gradient(155deg,rgba(255,255,255,.075),rgba(255,255,255,.018))}
+.card .num{font:800 .66rem/1 ui-monospace,monospace;color:var(--cyan)}
+.card h3{font-size:1.25rem;margin:44px 0 10px}
+.card p{color:var(--muted);font-size:.92rem}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px}
+.pills span{font-size:.68rem;padding:6px 8px;border:1px solid var(--line);border-radius:999px;color:#dbe7f7;background:rgba(255,255,255,.03)}
+
+.projects{margin-top:45px;border-top:1px solid var(--line)}
+.project{
+  display:grid;grid-template-columns:60px 1fr 46px;gap:24px;padding:30px 6px;border-bottom:1px solid var(--line);
+  text-decoration:none;transition:.25s ease
+}
+.project:hover{padding-left:16px;background:linear-gradient(90deg,rgba(82,247,232,.045),transparent)}
+.project .n{font:800 .68rem/1.5 ui-monospace,monospace;color:var(--muted)}
+.project small{color:var(--cyan);font-weight:800;letter-spacing:.10em;text-transform:uppercase}
+.project h3{font-size:2rem;letter-spacing:-.035em;margin:7px 0 10px}
+.project p{color:var(--muted);max-width:770px}
+.arrow{font-size:1.6rem;color:var(--cyan)}
+
+.stack-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;margin-top:40px}
+.stackbox{padding:20px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025)}
+.stackbox+ .stackbox{margin-top:10px}
+.stackbox b{display:block;font:800 .68rem/1 ui-monospace,monospace;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.cloud{display:flex;gap:8px;flex-wrap:wrap}
+.cloud span{padding:8px 10px;border-radius:10px;background:linear-gradient(135deg,rgba(82,247,232,.08),rgba(154,118,255,.07));border:1px solid var(--line);font-size:.78rem}
+
+.connect{
+  margin:90px auto 70px;padding:48px;border-radius:28px;border:1px solid var(--line);
+  background:
+    radial-gradient(circle at 12% 20%,rgba(82,247,232,.13),transparent 25rem),
+    radial-gradient(circle at 88% 78%,rgba(154,118,255,.13),transparent 25rem),
+    rgba(255,255,255,.025)
+}
+.connect h2{font-size:clamp(2.8rem,5vw,4.9rem);line-height:.98;letter-spacing:-.055em;margin:0}
+.socials{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:34px}
+.social{
+  min-height:112px;padding:16px;border:1px solid var(--line);border-radius:16px;text-decoration:none;
+  background:rgba(255,255,255,.025);transition:.25s ease
+}
+.social:hover{transform:translateY(-4px);border-color:rgba(82,247,232,.3)}
+.social b{display:block;margin-bottom:6px}
+.social span{color:var(--muted);font-size:.72rem;overflow-wrap:anywhere}
+
+footer{border-top:1px solid var(--line);padding:28px 0 42px;color:var(--muted);font-size:.75rem;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+.reveal{opacity:0;transform:translateY(18px);transition:.75s cubic-bezier(.2,.8,.2,1)}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:950px){
+  .hero{grid-template-columns:1fr;padding-top:70px}
+  .visual{min-height:540px}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .stack-grid{grid-template-columns:1fr}
+  .socials{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px){
+  .links a{display:none}
+  h1{font-size:clamp(3.6rem,17vw,5.8rem)}
+  .visual{min-height:470px}
+  .o1{width:330px;height:330px}.o2{width:245px;height:245px}.o3{width:150px;height:150px}
+  .dna{width:340px;height:340px}
+  .cards{grid-template-columns:1fr}
+  .project{grid-template-columns:36px 1fr 28px;gap:10px}
+  .project h3{font-size:1.55rem}
+  .socials{grid-template-columns:1fr}
+  .connect{padding:30px 20px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}.dna svg,.dot{animation:none!important}.reveal{opacity:1;transform:none}
+}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Gurgen Karapetyan</h1>
-    <div class="subtitle">Bioinformatics Data Engineer | Computational Biologist | Researcher</div>
-    <p>PhD student working at the intersection of bioinformatics, computational genomics, molecular biology, and microbiology.</p>
-    <p>I work with genomic and sequencing data, including next-generation sequencing (NGS), RNA-seq, metagenomics, comparative genomics, microbial genomics, and reproducible bioinformatics workflows.</p>
-    <div class="links">
-      <a href="https://github.com/kgurgen97">GitHub</a>
-      <a href="https://scholar.google.com/citations?hl=ru&user=DuhHgykAAAAJ">Google Scholar</a>
-      <a href="https://orcid.org/0009-0005-5509-2576">ORCID</a>
-      <a href="https://www.linkedin.com/in/gurgen-karapetyan-172612274/">LinkedIn</a>
-    </div>
-  </header>
 
-  <main>
-    <section>
-      <h2>Research Interests</h2>
-      <ul>
-        <li>Bioinformatics and computational genomics</li>
-        <li>Next-generation sequencing and sequencing quality control</li>
-        <li>RNA-seq and transcriptomics</li>
-        <li>Metagenomics and microbiome analysis</li>
-        <li>Comparative and microbial genomics</li>
-        <li>Molecular biology and microbiology</li>
-        <li>Genome evolution, DNA repair, and genome stability</li>
-        <li>Reproducible bioinformatics workflows and biological data analysis</li>
-      </ul>
-    </section>
+<nav class="shell">
+  <a class="brand" href="#top">
+    <span class="logo">GK</span>
+    <span><strong>Gurgen Karapetyan</strong><small>bioinformatics · genomics</small></span>
+  </a>
+  <div class="links">
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#stack">Stack</a>
+    <a href="#connect">Connect</a>
+  </div>
+</nav>
 
-    <section>
-      <h2>Selected Projects</h2>
-      <div class="project">
-        <h3><a href="https://github.com/kgurgen97/lactobacilli-oxidative-stress-genomics">Lactobacilli oxidative-stress genomics</a></h3>
-        <p>Comparative genomics of oxidative-stress response, DNA-repair systems, and genome-level variation in probiotic Lactobacillus species.</p>
-      </div>
-      <div class="project">
-        <h3><a href="https://github.com/kgurgen97/-Framework-for-Mapping">Framework for Mapping</a></h3>
-        <p>A reproducible computational framework for analysis and mapping of gut microbial taxa across large microbiome datasets.</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Research Profiles</h2>
-      <p>
-        <a href="https://scholar.google.com/citations?hl=ru&user=DuhHgykAAAAJ">Google Scholar</a><br>
-        <a href="https://orcid.org/0009-0005-5509-2576">ORCID</a><br>
-        <a href="https://github.com/kgurgen97">GitHub</a><br>
-        <a href="https://www.linkedin.com/in/gurgen-karapetyan-172612274/">LinkedIn</a>
+<main id="top">
+  <section class="hero shell">
+    <div class="reveal">
+      <div class="kicker"><i></i> Bioinformatics · Computational Biology</div>
+      <h1>Biology,<span class="grad">decoded.</span></h1>
+      <p class="lede">
+        I'm <strong>Gurgen Karapetyan</strong>, a Bioinformatics Data Engineer and Computational Biologist working across
+        genomics, NGS, RNA-seq, metagenomics, molecular biology and microbiology.
       </p>
-    </section>
-  </main>
+      <div class="actions">
+        <a class="btn primary" href="#projects">Explore my work ↘</a>
+        <a class="btn ghost" href="https://github.com/kgurgen97" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+      <div class="hero-tags">
+        <span>NGS</span><span>RNA-seq</span><span>Metagenomics</span><span>Comparative Genomics</span><span>Microbiology</span>
+      </div>
+    </div>
 
-  <footer>© Gurgen Karapetyan</footer>
+    <div class="visual reveal">
+      <div class="orbit o1"></div><div class="orbit o2"></div><div class="orbit o3"></div>
+      <div class="dot d1"></div><div class="dot d2"></div><div class="dot d3"></div><div class="dot d4"></div>
+
+      <div class="dna" aria-hidden="true">
+        <svg viewBox="0 0 420 420" fill="none">
+          <defs>
+            <linearGradient id="g1" x1="70" y1="40" x2="350" y2="380">
+              <stop stop-color="#52f7e8"/>
+              <stop offset=".55" stop-color="#5ca8ff"/>
+              <stop offset="1" stop-color="#9a76ff"/>
+            </linearGradient>
+          </defs>
+          <path d="M135 30 C310 110 110 190 285 270 C350 300 340 350 285 390" stroke="url(#g1)" stroke-width="5" stroke-linecap="round"/>
+          <path d="M285 30 C110 110 310 190 135 270 C70 300 80 350 135 390" stroke="url(#g1)" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+          <g stroke="rgba(255,255,255,.32)" stroke-width="2">
+            <path d="M152 55 L268 55"/><path d="M123 88 L297 88"/><path d="M120 125 L300 125"/>
+            <path d="M148 162 L272 162"/><path d="M184 200 L236 200"/><path d="M145 238 L275 238"/>
+            <path d="M120 276 L300 276"/><path d="M125 314 L295 314"/><path d="M151 352 L269 352"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="core"><div><b>GK</b><small>genome → signal → meaning</small></div></div>
+
+      <div class="console">
+        <div><strong>identity.resolve()</strong></div>
+        <div>✓ Gurgen Karapetyan</div>
+        <div>✓ Bioinformatics Data Engineer</div>
+        <div>✓ Computational Genomics · NGS · Metagenomics</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section shell" id="research">
+    <div class="section-label reveal">01 / Research map</div>
+    <h2 class="reveal">Where computation meets biology.</h2>
+    <p class="section-intro reveal">
+      I work across multiple biological scales, from sequencing quality and transcriptomics to microbial genomes,
+      comparative genomics and molecular mechanisms.
+    </p>
+
+    <div class="cards">
+      <article class="card reveal"><div class="num">01</div><h3>Computational Genomics</h3><p>Genome-scale analysis, comparative approaches, genomic variation and reproducible computational workflows.</p><div class="pills"><span>genomics</span><span>comparative</span><span>variation</span></div></article>
+      <article class="card reveal"><div class="num">02</div><h3>NGS & Quality Analytics</h3><p>Sequencing performance, QC metrics, stability monitoring and investigation of technical variation.</p><div class="pills"><span>NGS</span><span>QC</span><span>reproducibility</span></div></article>
+      <article class="card reveal"><div class="num">03</div><h3>RNA-seq & Transcriptomics</h3><p>Expression analysis, transcriptome-level signals and workflow quality interpreted in biological context.</p><div class="pills"><span>RNA-seq</span><span>expression</span></div></article>
+      <article class="card reveal"><div class="num">04</div><h3>Metagenomics</h3><p>Microbial communities, genome-resolved analysis and computational exploration of complex microbiome data.</p><div class="pills"><span>microbiome</span><span>microbial genomics</span></div></article>
+      <article class="card reveal"><div class="num">05</div><h3>Molecular Biology</h3><p>DNA repair, genome stability and oxidative-stress biology viewed through computational evidence.</p><div class="pills"><span>DNA repair</span><span>genome stability</span></div></article>
+      <article class="card reveal"><div class="num">06</div><h3>Microbiology</h3><p>Microbial evolution, strain-level genomics and phenotype-linked questions in bacterial systems.</p><div class="pills"><span>bacteria</span><span>evolution</span><span>strains</span></div></article>
+    </div>
+  </section>
+
+  <section class="section shell" id="projects">
+    <div class="section-label reveal">02 / Selected projects</div>
+    <h2 class="reveal">Projects with a biological question at the center.</h2>
+
+    <div class="projects">
+      <a class="project reveal" href="https://github.com/kgurgen97/lactobacilli-oxidative-stress-genomics" target="_blank" rel="noopener">
+        <div class="n">01</div>
+        <div><small>Comparative genomics · Microbiology</small><h3>Lactobacilli oxidative-stress genomics</h3><p>Comparative analysis of oxidative-stress response, DNA-repair systems and genome-level variation across probiotic Lactobacillus species.</p></div>
+        <div class="arrow">↗</div>
+      </a>
+      <a class="project reveal" href="https://github.com/kgurgen97/-Framework-for-Mapping" target="_blank" rel="noopener">
+        <div class="n">02</div>
+        <div><small>Metagenomics · Data workflows</small><h3>Framework for Mapping</h3><p>A reproducible computational framework for analysis and mapping of gut microbial taxa across large microbiome datasets.</p></div>
+        <div class="arrow">↗</div>
+      </a>
+      <div class="project reveal">
+        <div class="n">03</div>
+        <div><small>Sequencing analytics · QC</small><h3>Sequencing performance & reproducibility</h3><p>Multi-metric monitoring and analytical investigation of sequencing quality, technical stability and assay performance.</p></div>
+        <div class="arrow">◇</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section shell" id="stack">
+    <div class="section-label reveal">03 / Stack</div>
+    <div class="stack-grid">
+      <div class="reveal">
+        <h2>From raw data to evidence.</h2>
+        <p class="section-intro">A mixed toolkit spanning data engineering, statistics and domain-specific bioinformatics.</p>
+      </div>
+      <div class="reveal">
+        <div class="stackbox"><b>Engineering</b><div class="cloud"><span>Python</span><span>Bash</span><span>SQL</span><span>Git</span><span>Linux</span><span>Jupyter</span><span>AWS</span></div></div>
+        <div class="stackbox"><b>Data</b><div class="cloud"><span>pandas</span><span>NumPy</span><span>data QC</span><span>visualization</span><span>automation</span><span>workflow design</span></div></div>
+        <div class="stackbox"><b>Bioinformatics</b><div class="cloud"><span>NGS</span><span>RNA-seq</span><span>metagenomics</span><span>comparative genomics</span><span>microbial genomics</span><span>IGV</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="connect shell reveal" id="connect">
+    <div class="section-label">04 / Connect</div>
+    <h2>One researcher.<br>One connected identity.</h2>
+    <div class="socials">
+      <a class="social" href="https://github.com/kgurgen97" target="_blank" rel="noopener"><b>GitHub ↗</b><span>@kgurgen97</span></a>
+      <a class="social" href="https://scholar.google.com/citations?hl=ru&user=DuhHgykAAAAJ" target="_blank" rel="noopener"><b>Google Scholar ↗</b><span>Research profile</span></a>
+      <a class="social" href="https://orcid.org/0009-0005-5509-2576" target="_blank" rel="noopener"><b>ORCID ↗</b><span>0009-0005-5509-2576</span></a>
+      <a class="social" href="https://www.linkedin.com/in/gurgen-karapetyan-172612274/" target="_blank" rel="noopener"><b>LinkedIn ↗</b><span>Professional profile</span></a>
+      <a class="social" href="mailto:karagurgen23@gmail.com"><b>Email ↗</b><span>karagurgen23@gmail.com</span></a>
+      <a class="social" href="https://t.me/CATGCCTAT" target="_blank" rel="noopener"><b>Telegram ↗</b><span>@CATGCCTAT</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="shell">
+  <span><strong>Gurgen Karapetyan</strong> · Bioinformatics Data Engineer · Computational Biologist</span>
+  <span>karagurgen23@gmail.com · @CATGCCTAT</span>
+  <span>© <span id="year"></span></span>
+</footer>
+
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add("on");observer.unobserve(e.target)}
+  })
+},{threshold:.12});
+document.querySelectorAll(".reveal").forEach((el,i)=>{
+  el.style.transitionDelay=Math.min((i%4)*70,210)+"ms";
+  observer.observe(el);
+});
+</script>
 </body>
 </html>
